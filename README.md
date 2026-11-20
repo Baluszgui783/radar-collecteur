@@ -10,8 +10,8 @@ Configurer quatre secrets Actions pour le dépôt : SOURCE_CONFIG (JSON privé d
 
 ## Fonctionnement
 
-La liste watch est revérifiée chaque jour. Le collecteur parcourt aussi une tranche tournante de l’annuaire ouvert des activateurs France Num. Les domaines candidats régis par discovery_domains disposent d’une autorisation de collecte documentée en privé. Le lien de l’annuaire doit correspondre au domaine officiel. Aucune qualification sur le seul code d’activité. Ne placer dans la configuration que des URL organisationnelles et des extraits autorisés, sans coordonnées personnelles. Le collecteur respecte robots.txt, les délais d’accès, les refus et les limites de taille. Une anomalie de source surveillée annule le lot. Une reprise au plus sur les lectures 502/503/504. Aucun renvoi automatique du dépôt. Un dépôt contient au plus vingt SIREN.
+Le collecteur revérifie uniquement les sources explicitement validées dans `watch`. Ne placer dans la configuration que des URL organisationnelles et des extraits autorisés, sans coordonnées personnelles. Le collecteur respecte robots.txt, les délais d’accès, les refus et les limites de taille. Une anomalie de source surveillée annule le lot. Une reprise au plus sur les lectures 502/503/504. Aucun renvoi automatique du dépôt. Un dépôt contient au plus vingt SIREN.
 
 Exécuter les tests avec `python3 -m unittest discover -s tests -v`. La fixture du répertoire fixtures est fictive.
 
-La découverte automatique accepte aussi un nouveau domaine lié comme site officiel, à licence explicite CC BY ou CC0, avec mention SaaS et professionnelle, SIREN publié sur les mentions légales, signal explicite sur son propre site, et contrôle API final. Les autres domaines passent par les règles de sources approuvées. Toute opposition commerciale explicite, statut fermé ou diffusion insuffisante déclenche un retrait minimal par SIREN.
+Toute opposition commerciale explicite, statut fermé ou diffusion insuffisante déclenche un retrait minimal par SIREN.

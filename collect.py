@@ -155,7 +155,7 @@ def discover(config,now):
 def collect(config,now):
     rows={}
     withdrawn=[]
-    for candidate in config.get("watch",[])+discover(config,now):
+    for candidate in config.get("watch",[]):
         if candidate["siren"] in rows: continue
         try: row=verify(candidate,now)
         except Withdrawn:
